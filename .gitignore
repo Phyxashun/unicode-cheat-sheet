@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies and Builds
+node_modules
+build
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Project specific exclusions
+ALL/*
+**/*OLD*.*
+.bun/*
+*.sqlite
+*.db
+*.txt
+.env*
+test/*
+archive/*
+src/archive/*
+*.pdf
+*.docx
+Prompt*.*

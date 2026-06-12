@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer {
+  @theme {
+    --color-text: var(--text);
+    --color-text-h: var(--text-h);
+    --color-bg: var(--bg);
+    --color-border: var(--border);
+    --color-code-bg: var(--code-bg);
+    --color-accent: var(--accent);
+    --color-accent-bg: var(--accent-bg);
+    --color-accent-border: var(--accent-border);
+    --color-social-bg: var(--social-bg);
+    --shadow-custom: var(--shadow);
+    --font-logo: "Chelsea Market" system-ui;
+    --font-keys: "Libertinus Keyboard" system-ui;
+    --font-sans: system-ui "Segoe UI" sans-serif;
+    --font-heading: system-ui "Segoe UI" sans-serif;
+    --font-mono: "Iosevka Nerd Font Propo" ui-monospace Consolas monospace;
+  }
+
+  :root {
+    --text: #6b6375;
+    --text-h: #08060d;
+    --bg: #fff;
+    --border: #e5e4e7;
+    --code-bg: #f4f3ec;
+    --accent: #aa3bff;
+    --accent-bg: rgba(170 59 255 0.1);
+    --accent-border: rgba(170 59 255 0.5);
+    --social-bg: rgba(244 243 236 0.5);
+    --shadow: rgba(0 0 0 0.1) 0 10px 15px -3px, rgba(0 0 0 0.05) 0 4px 6px -2px;
+    color-scheme: light dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #9ca3af;
+      --text-h: #f3f4f6;
+      --bg: #16171d;
+      --border: #2e303a88;
+      --code-bg: #1f2028;
+      --accent: #c084fc;
+      --accent-bg: rgba(192 132 252 0.15);
+      --accent-border: rgba(192 132 252 0.5);
+      --social-bg: rgba(47 48 58 0.5);
+      --shadow:
+        rgba(0 0 0 0.4) 0 10px 15px -3px, rgba(0 0 0 0.25) 0 4px 6px -2px;
+    }
+  }
+
+  @font-face {
+    font-family: "Iosevka Nerd Font Propo";
+    src: url("/IosevkaNerdFontPropo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Libertinus Keyboard";
+    src: url("/Libertinus-Keyboard-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Chelsea Market";
+    src: url("/Chelsea-Market-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    background-color: var(--bg);
+    color: var(--text);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: transparent;
+    background-color: transparent;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}

@@ -34,9 +34,10 @@ class ParticleSystem {
     const accentBg =
       styles.getPropertyValue("--accent-bg").trim() ||
       "rgba(192, 132, 252, 0.15)";
+    //const accentBorder = styles.getPropertyValue("--accent-border").trim() || "rgba(192, 132, 252, 0.5)";
+
     const accentBorder =
-      styles.getPropertyValue("--accent-border").trim() ||
-      "rgba(192, 132, 252, 0.5)";
+      styles.getPropertyValue("--accent-border").trim() || "#c084fc";
 
     this.themeColors = [text, text, textH, accent, accentBorder, accentBg];
 
@@ -185,12 +186,14 @@ class ParticleSystem {
     }
 
     // Use dynamic theme line color instead of static constant
+    this.ctx.globalCompositeOperation = "lighter";
     this.ctx.strokeStyle = this.lineColor;
     for (let k = 0; k < 4; k++) {
       this.ctx.globalAlpha = Options.alphas[k];
       this.ctx.stroke(paths[k]);
     }
     this.ctx.globalAlpha = 1.0;
+    this.ctx.globalCompositeOperation = "source-over";
   }
 
   private loop = () => {

@@ -67,6 +67,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
+  "editor.glyphMargin": true,
   "files.autoSave": "onFocusChange",
   // ============================================================================================
   //      🖥️ TERMINAL SETTINGS
@@ -218,7 +219,7 @@
   // ============================================================================================
   //      ⚙️ REGION FOLDING SETTINGS
   // ============================================================================================
-  // #region
+  // #region maptz.regionfolder
   "maptz.regionfolder": {
     "[json]": {
       "foldEnd": "/* #endregion */",
@@ -340,7 +341,16 @@
       "italic": false
     },
     {
-      "tag": "todo",
+      "tag": "$",
+      "color": "#50fa7b",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "@",
       "color": "#ffb86c",
       "strikethrough": false,
       "underline": false,
@@ -376,7 +386,7 @@
       "italic": false
     },
     {
-      "tag": "bug",
+      "tag": "#",
       "color": "#ff5555",
       "strikethrough": false,
       "underline": false,
@@ -487,51 +497,99 @@
   // ============================================================================================
   //      🎨 HIGHLIGHT SETTINGS
   // ============================================================================================
-  // ~ FILE-PATH: .vscode/settings.json
+  //
+  // Dracula Classic:
+  // Token	        Hex	        Usage
+  // --------------------------------------------------------------------------------------------
+  // Background	    #282A36	    Main background
+  // Current Line	  #6272A4	    Semantic current line highlight token
+  // Selection	    #44475A	    Text selection
+  // Foreground	    #F8F8F2	    Default text
+  // Comment	      #6272A4	    Comments, disabled code
+  // Red	          #FF5555	    Errors, warnings, deletion
+  // Orange	        #FFB86C	    Numbers, constants, booleans
+  // Yellow	        #F1FA8C	    Strings, text content
+  // Green	        #50FA7B	    Functions, methods, inherited classes
+  // Cyan	          #8BE9FD	    Classes, types, support, regex
+  // Purple	        #BD93F9	    Instance reserved words, constants
+  // Pink	          #FF79C6	    Keywords, storage types
+  //
   //
   "highlight.decorations": {},
   "highlight.regexFlags": "gim",
   "highlight.regexes": {
-    "((\/\/)(\\s{1}~\\s{1})(file-path\\s{0}:)(\\s{1}.*\\s?))(\\r?\\n)": {
+    //$ Highlight file paths in comments with a specific format, e.g.:
+    // ~ FILE-PATH: src/styles.css
+    //
+    //  2          3              4          5      6
+    "((\/\/)(\\s{1}~\\s{1})(file-path\\s{0})(:)(\\s{1}.*))": {
       "regexFlags": "gi",
       "decorations": [
+        //& Group 1: the entire match: ((//)\s{1}~\s{1}(file-path\s{0})(:)(\s{1}.*))
         {
-          //* Group 1: the entire match
           "borderRadius": "4px",
-          "border": "1px solid #FF9E64",
-          "backgroundColor": "#000"
+          "border": "1px solid #FFB86C",
+          "backgroundColor": "#44475A",
+          "gutterIconPath": "/home/phyxashun/Projects/unicode-cheat-sheet/.vscode/arrow.svg",
+          "gutterIconSize": "contain"
         },
+        //& Group 2: (//) comment syntax: (//)
+        { "color": "#FFB86C" },
+        //& Group 3: (~) symbol: (\\s{1}~\\s{1})
+        { "color": "#FFB86C" },
+        //& Group 4: (file-path) tag: (file-path\\s{0})
         {
-          //* Group 2: (//) comment slashes
-          "color": "#00FF85"
+          "color": "#FF79C6",
+          "fontWeight": "bold"
         },
+        //& Group 5: (:) colon: (:)
+        { "color": "#FFB86C" },
+        //& Group 6: (.*) the actual file path text: (\\s{1}.*)
+        { "color": "#BD93F9" }
+      ]
+    },
+    //$ Highlight web URLs in comments with a specific format, e.g.:
+    // https://www.example.com
+    // http://localhost
+    // https://localhost:8080/dashboard#metrics
+    // http://127.0.0.1:3000
+    // https://cspell.org
+    // ftp://files.local/shared/data.csv
+    "([a-zA-Z0-9+.-]+:\\/\\/[a-zA-Z0-9@:%._\\+~#=\\-]{1,256}(?::\\d+)?(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*))\\s+?$": {
+      "filterScope": "**",
+      "filterLanguage": "**",
+      "decorations": [
         {
-          //* Group 3: (~) symbol
-          "color": "#00FF85"
-        },
-        {
-          //* Group 4: (file-path) tag
+          "color": "#6272a4",
+          "backgroundColor": "transparent",
           "fontWeight": "bold",
-          "color": "#FF007F"
-        },
-        {
-          //* Group 5: (.*) the actual file path text
-          "fontWeight": "bold",
-          "color": "#BB86FC",
-          "border": "none",
-          "after": {
-            "contentText": " "
-          }
-        },
-        {
-          //* Group 6: (line break)
-          "before": {
-            "color": "#00FF85",
-            "contentText": " ~ //",
-            "paddingLeft": "4px"
-          }
+          "textDecoration": "underline"
         }
       ]
+    }
+  },
+  // ============================================================================================
+  //      📖 CSPELL DICTIONARY SETTINGS
+  // ============================================================================================
+  "cSpell.language": "en_US",
+  "cSpell.dictionaries": [
+    "en_US",
+    "typescript",
+    "javascript",
+    "html",
+    "css",
+    "markdown",
+    "npm",
+    "node",
+    "react-components",
+    "software-terms"
+  ],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:unicode-cheat-sheet}/.vscode/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
     }
   }
 }

@@ -1,4 +1,5 @@
-// search_unicode.ts
+// ~ FILE-PATH: src/scripts/search-unicode.ts
+
 import { Database } from "bun:sqlite";
 
 // Standardized to match sync script destination extension

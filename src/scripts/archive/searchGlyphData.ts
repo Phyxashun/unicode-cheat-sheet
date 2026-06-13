@@ -1,4 +1,5 @@
-// scripts/searchGlyphData.ts
+// ~ FILE-PATH: src/scripts/archive/searchGlyphData.ts
+
 import path from "path";
 
 type GlyphDetail = {

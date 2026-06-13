@@ -1,4 +1,5 @@
-// scripts/runConversion.ts
+// ~ FILE-PATH: src/scripts/archive/runConversion.ts
+
 import { csvToJson } from "./csvToJson";
 import path from "path";
 

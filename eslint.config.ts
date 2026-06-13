@@ -1,3 +1,5 @@
+// ~ FILE-PATH: /eslint.config.ts
+
 import { globalIgnores } from "eslint/config";
 import globals from "globals";
 import { __dirname } from "path";

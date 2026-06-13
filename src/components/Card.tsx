@@ -1,3 +1,5 @@
+// ~ FILE-PATH: src/components/Card.tsx
+
 import { type FC, useState } from "react";
 
 type CardProps = {

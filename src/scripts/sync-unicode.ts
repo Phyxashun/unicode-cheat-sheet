@@ -1,3 +1,5 @@
+// ~ FILE-PATH: src/scripts/sync-unicode.ts
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Database, Statement } from "bun:sqlite";
 import ora from "ora";

@@ -1,4 +1,4 @@
-// src/components/Particles.ts
+// ~ FILE-PATH: src/components/Particles.tsx
 
 import { type FC, useEffect, useRef } from "react";
 import ParticleSystem from "../utils/ParticleSystem";

@@ -1,3 +1,10 @@
+/* // ~ FILE-PATH: src/styles.css */
+/*
+ * This file contains the global styles for the Unicode Cheat Sheet application.
+ * It defines CSS variables for colors, fonts, and shadows, and includes
+ * responsive design adjustments for light and dark themes. The file also
+ * imports Tailwind CSS for utility-first styling.
+ */
 @import "tailwindcss";
 
 @layer {

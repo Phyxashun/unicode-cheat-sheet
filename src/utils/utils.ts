@@ -1,4 +1,4 @@
-// src/utils/utils.ts
+// ~ FILE-PATH: src/utils/utils.ts
 
 /**
  * Uses a 2D canvas to check if a character has any visible pixels.

@@ -1,3 +1,5 @@
+// ~ FILE-PATH: src/components/GlyphGrid.tsx
+
 import {
   type FC,
   useState,

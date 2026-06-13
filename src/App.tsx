@@ -1,17 +1,18 @@
+// ~ FILE-PATH: src/App.tsx
 
-// src/App.tsx
-
-import { type FC, useState, useEffect, useCallback } from 'react';
-import Header from './components/Header';
-import GlyphGrid from './components/GlyphGrid';
-import Particles from './components/Particles';
-import { fetchGlyphData } from './utils/utils';
+import { type FC, useState, useEffect, useCallback } from "react";
+import Header from "./components/Header";
+import GlyphGrid from "./components/GlyphGrid";
+import Particles from "./components/Particles";
+import { fetchGlyphData } from "./utils/utils";
 
 const App: FC = () => {
   const [fontSize, setFontSize] = useState<number>(36);
-  const [search, setSearch] = useState<string>('');
+  const [search, setSearch] = useState<string>("");
   const [glyphNames, setGlyphNames] = useState<Map<number, string>>(new Map());
-  const [categories, setCategories] = useState<{ name: string; start: number; end: number }[]>([]);
+  const [categories, setCategories] = useState<
+    { name: string; start: number; end: number }[]
+  >([]);
   const [selectedCategory, setSelectedCategory] = useState<{
     start: number;
     end: number;
@@ -25,10 +26,10 @@ const App: FC = () => {
   }, []);
 
   const handleCategoryChange = (value: string) => {
-    if (value === 'all') {
+    if (value === "all") {
       setSelectedCategory(null);
     } else {
-      const [start, end] = value.split('-').map(Number);
+      const [start, end] = value.split("-").map(Number);
       setSelectedCategory({ start, end });
     }
   };
@@ -38,10 +39,10 @@ const App: FC = () => {
   }, []);
 
   // Create a unique key from the current filters.
-  const gridKey = `${selectedCategory?.start ?? 'all'}-${search}`;
+  const gridKey = `${selectedCategory?.start ?? "all"}-${search}`;
 
   return (
-    <div className='min-h-screen font-sans'>
+    <div className="min-h-screen font-sans">
       <Particles />
       <Header
         search={search}
@@ -65,4 +66,3 @@ const App: FC = () => {
 };
 
 export default App;
-

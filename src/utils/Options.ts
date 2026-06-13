@@ -1,4 +1,4 @@
-// /src/utils/Options.ts
+// ~ FILE-PATH: src/utils/Options.ts
 
 export interface MousePosition {
   x: number;

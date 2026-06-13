@@ -1,4 +1,5 @@
-// scripts/runSearch.ts
+// ~ FILE-PATH: src/scripts/archive/runSearch.ts
+
 import { loadGlyphData, getGlyphByCode } from "./searchGlyphData";
 
 async function main() {

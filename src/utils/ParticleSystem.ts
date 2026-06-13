@@ -1,3 +1,5 @@
+// ~ FILE-PATH: src/utils/ParticleSystem.ts
+
 import Particle from "./Particle";
 import Options, { type MousePosition } from "./Options";
 

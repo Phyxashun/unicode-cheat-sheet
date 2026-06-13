@@ -1,6 +1,6 @@
-// ./src/components/Logo.tsx
+// ~ FILE-PATH: src/components/Logo.tsx
 
-import { type FC } from 'react';
+import { type FC } from "react";
 
 interface LogoProps {
   image?: string;
@@ -11,8 +11,8 @@ interface LogoProps {
 const Logo: FC<LogoProps> = () => {
   return (
     <div
-      id='logo'
-      className='
+      id="logo"
+      className="
         mask-radial mx-auto flex max-w-2xl
         items-center justify-center
         gap-x-4 rounded-xl
@@ -20,22 +20,22 @@ const Logo: FC<LogoProps> = () => {
         mask-radial-from-0% mask-radial-to-70%
         p-11
         dark:from-slate-800 dark:via-slate-800/20 dark:to-transparent
-      '
+      "
     >
       {/* Icon will go here later */}
       <div
-        className='
+        className="
         font-logo text-accent
         flex items-center justify-center
         text-6xl
-        '
+        "
       >
         <span
-          id='logo-zalgo'
-          className='
+          id="logo-zalgo"
+          className="
             inline-flex justify-center text-center
             whitespace-nowrap select-none
-          '
+          "
         >
           Ư̴̟̞̱̗͂͜ń̗̜͔͕̯́͑i̡̻̹͂͑͑͌̃c̴͐́̕͏̯̃͒o̡͇̟̪͑͆̋̾ď̴̞̱̞̔͑͟ḛ̏̿͟͏̞̗̻ ̩̮͓́͑́̏͠C͛͗͏̨̛̤̹͑h̡̛̜̮͛̿͐͝ȅ̴̴̝̮͔̂̓á̯̝̙͒̔̚͠ṯ̶̴̯̿̔͆̕s̜̱̱̼̽͒͏͟h̙̻̜͙̗́͆͝e̴̡̟̦̾̿̾̕e̴̤͇̞̟͑͆̈t̴͏̗̯̔͏̴̮
         </span>

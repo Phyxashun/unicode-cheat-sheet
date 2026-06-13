@@ -1,4 +1,5 @@
-// scripts/csvToJson.ts
+// ~ FILE-PATH: src/scripts/archive/csvToJson.ts
+
 import Bun, { type BunFile } from "bun";
 
 /**

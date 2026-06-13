@@ -1,6 +1,14 @@
-<svg viewBox='0 0 100 60' className='w-full h-full text-(--text) fill-current'>
-    <text x='50%' y='55%' dominantBaseline='middle' textAnchor='middle' fontWeight='400'
-        fontFamily: '"Chelsea Market", system-ui' ; className='font-logo text-[72px] tracking-tight'>
-        U+
-    </text>
+<svg viewBox="0 0 100 60" className="w-full h-full"> 
+  <text 
+    x="50%" 
+    y="50%" 
+    dominantBaseline="middle" 
+    textAnchor="middle" 
+    fontWeight="400" 
+    fill="#FF5733"
+    style={{ fontFamily: '"Chelsea Market", sans-serif, system-ui' }} 
+    class="font-logo"
+  >
+    U+
+  </text> 
 </svg>

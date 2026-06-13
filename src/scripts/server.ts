@@ -1,3 +1,5 @@
+// ~ FILE-PATH: src/scripts/server.ts
+
 import { Database } from "bun:sqlite";
 import path from "path";
 

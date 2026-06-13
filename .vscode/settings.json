@@ -218,22 +218,24 @@
   // ============================================================================================
   //      ⚙️ REGION FOLDING SETTINGS
   // ============================================================================================
+  //&region regionfolder
   "maptz.regionfolder": {
-    "[powershell]": {
+    "[json]": {
       "foldStart": "#&region [NAME]",
-      "foldStartRegex": "^[\\s]*#&?[\\s]*region[\\s]*(.*)",
+      "foldStartRegex": "\/\/[\\s]*[#|&]?[\\s]*region[\\s]*(.*)",
       "foldEnd": "#&endregion",
-      "foldEndRegex": "^[\\s]*#&?[\\s]*endregion",
+      "foldEndRegex": "\/\/[\\s]*[#|&]?[\\s]*endregion",
       "foldDefinitions": [
         {
           "foldStart": "#region [NAME]",
-          "foldStartRegex": "^[\\s]*#?[\\s]*region[\\s]*(.*)",
+          "foldStartRegex": "\/\/[\\s]*[#|&]?[\\s]*region[\\s]*(.*)",
           "foldEnd": "#endregion",
-          "foldEndRegex": "^[\\s]*#?[\\s]*endregion"
+          "foldEndRegex": "\/\/[\\s]*[#|&]?[\\s]*endregion"
         }
       ]
     }
   },
+  //&endregion
   // ============================================================================================
   //      ⚙️ BETTER COMMENTS SETTINGS
   // ============================================================================================
@@ -412,6 +414,9 @@
     "BLOCKSTART",
     "NAMESLIST"
   ],
+  // ============================================================================================
+  //      🎨 HIGHLIGHT SETTINGS
+  // ============================================================================================
   // ~ FILE-PATH: .vscode/settings.json
   //
   "highlight.decorations": {},

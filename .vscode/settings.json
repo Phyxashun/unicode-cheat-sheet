@@ -218,24 +218,94 @@
   // ============================================================================================
   //      ⚙️ REGION FOLDING SETTINGS
   // ============================================================================================
-  //&region regionfolder
+  // #region
   "maptz.regionfolder": {
     "[json]": {
-      "foldStart": "#&region [NAME]",
-      "foldStartRegex": "\/\/[\\s]*[#|&]?[\\s]*region[\\s]*(.*)",
-      "foldEnd": "#&endregion",
-      "foldEndRegex": "\/\/[\\s]*[#|&]?[\\s]*endregion",
+      "foldEnd": "/* #endregion */",
+      "foldEndRegex": "/\\*[\\s]*#endregion",
+      "foldStart": "/* #region [NAME] */",
+      "foldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*(.*)[\\s]*\\*/[\\s]*$",
+      "defaultFoldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*default\\s(.*)[\\s]*\\*/[\\s]*$",
       "foldDefinitions": [
         {
-          "foldStart": "#region [NAME]",
-          "foldStartRegex": "\/\/[\\s]*[#|&]?[\\s]*region[\\s]*(.*)",
-          "foldEnd": "#endregion",
-          "foldEndRegex": "\/\/[\\s]*[#|&]?[\\s]*endregion"
+          "foldEndRegex": "\\*+/[\\s]*$",
+          "foldStartRegex": "^[\\s]*/\\*\\*+",
+          "isFoldedByDefault": true
+        }
+      ]
+    },
+    "[jsonc]": {
+      "foldEnd": "/* #endregion */",
+      "foldEndRegex": "/\\*[\\s]*#endregion",
+      "foldStart": "/* #region [NAME] */",
+      "foldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*(.*)[\\s]*\\*/[\\s]*$",
+      "defaultFoldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*default\\s(.*)[\\s]*\\*/[\\s]*$",
+      "foldDefinitions": [
+        {
+          "foldEndRegex": "\\*+/[\\s]*$",
+          "foldStartRegex": "^[\\s]*/\\*\\*+",
+          "isFoldedByDefault": true
+        }
+      ]
+    },
+    "[javascript]": {
+      "foldEnd": "/* #endregion */",
+      "foldEndRegex": "/\\*[\\s]*#endregion",
+      "foldStart": "/* #region [NAME] */",
+      "foldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*(.*)[\\s]*\\*/[\\s]*$",
+      "defaultFoldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*default\\s(.*)[\\s]*\\*/[\\s]*$",
+      "foldDefinitions": [
+        {
+          "foldEndRegex": "\\*+/[\\s]*$",
+          "foldStartRegex": "^[\\s]*/\\*\\*+",
+          "isFoldedByDefault": true
+        }
+      ]
+    },
+    "[javascriptreact]": {
+      "foldEnd": "/* #endregion */",
+      "foldEndRegex": "/\\*[\\s]*#endregion",
+      "foldStart": "/* #region [NAME] */",
+      "foldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*(.*)[\\s]*\\*/[\\s]*$",
+      "defaultFoldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*default\\s(.*)[\\s]*\\*/[\\s]*$",
+      "foldDefinitions": [
+        {
+          "foldEndRegex": "\\*+/[\\s]*$",
+          "foldStartRegex": "^[\\s]*/\\*\\*+",
+          "isFoldedByDefault": true
+        }
+      ]
+    },
+    "[typescript]": {
+      "foldEnd": "/* #endregion */",
+      "foldEndRegex": "/\\*[\\s]*#endregion",
+      "foldStart": "/* #region [NAME] */",
+      "foldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*(.*)[\\s]*\\*/[\\s]*$",
+      "defaultFoldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*default\\s(.*)[\\s]*\\*/[\\s]*$",
+      "foldDefinitions": [
+        {
+          "foldEndRegex": "\\*+/[\\s]*$",
+          "foldStartRegex": "^[\\s]*/\\*\\*+",
+          "isFoldedByDefault": true
+        }
+      ]
+    },
+    "[typescriptreact]": {
+      "foldEnd": "/* #endregion */",
+      "foldEndRegex": "/\\*[\\s]*#endregion",
+      "foldStart": "/* #region [NAME] */",
+      "foldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*(.*)[\\s]*\\*/[\\s]*$",
+      "defaultFoldStartRegex": "^[\\s]*/\\*[\\s]*#region[\\s]*default\\s(.*)[\\s]*\\*/[\\s]*$",
+      "foldDefinitions": [
+        {
+          "foldEndRegex": "\\*+/[\\s]*$",
+          "foldStartRegex": "^[\\s]*/\\*\\*+",
+          "isFoldedByDefault": true
         }
       ]
     }
   },
-  //&endregion
+  // #endregion
   // ============================================================================================
   //      ⚙️ BETTER COMMENTS SETTINGS
   // ============================================================================================

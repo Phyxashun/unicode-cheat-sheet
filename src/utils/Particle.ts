@@ -10,6 +10,8 @@ class Particle {
   r: number;
   colorIndex: number;
 
+  // #region Constructor
+
   constructor(width: number, height: number) {
     this.x = Options.random(0, width);
     this.y = Options.random(0, height);
@@ -70,6 +72,8 @@ class Particle {
       }
     }
   }
+
+  // #endregion
 
   // Ensures particles wrap around when that reach canvas boundaries
   private wrapEdges(width: number, height: number) {

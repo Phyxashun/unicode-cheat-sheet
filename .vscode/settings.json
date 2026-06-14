@@ -522,7 +522,7 @@
     // ~ FILE-PATH: src/styles.css
     //
     //  2          3              4          5      6
-    "((\/\/)(\\s{1}~\\s{1})(file-path\\s{0})(:)(\\s{1}.*))": {
+    "((\/\/|#)(\\s{1}~\\s{1})(file-path\\s{0})(:)(\\s{1}.*))": {
       "regexFlags": "gi",
       "decorations": [
         //& Group 1: the entire match: ((//)\s{1}~\s{1}(file-path\s{0})(:)(\s{1}.*))

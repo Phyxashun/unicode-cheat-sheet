@@ -1,12 +1,16 @@
 // ~ FILE-PATH: src/components/App.tsx
 
 import { type FC, useState, useEffect, useCallback } from "react";
-import Header from "./components/Header";
-import GlyphGrid from "./components/GlyphGrid";
-import Particles from "./components/Particles";
-import { fetchGlyphData } from "./utils/utils";
-
-const App: FC = () => {
+import Header from "./Header";
+import GlyphGrid from "./GlyphGrid";
+import Particles from "./Particles";
+import { fetchGlyphData } from "../utils/utils";
+import Settings from "../Settings";
+interface AppProps {
+  settings: Settings;
+}
+const App: FC = (settings: AppProps) => {
+  console.log("APP SETTINGS:", settings);
   const [fontSize, setFontSize] = useState<number>(36);
   const [search, setSearch] = useState<string>("");
   const [glyphNames, setGlyphNames] = useState<Map<number, string>>(new Map());

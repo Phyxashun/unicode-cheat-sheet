@@ -2,8 +2,11 @@
 
 import { StrictMode } from "react";
 import { createRoot, type Root } from "react-dom/client";
-import "./src/styles/styles.css";
-import App from "./src/components/App.tsx";
+import "./styles/styles.css";
+import Settings from "./Settings.ts";
+import App from "./components/App.tsx";
+
+const settings: Settings = Settings.getInstance();
 
 const rootElement: HTMLDivElement = document.getElementById(
   "root",
@@ -12,6 +15,6 @@ const root: Root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App />
+    <App {...settings} />
   </StrictMode>,
 );

@@ -2,8 +2,8 @@
 
 import { StrictMode } from "react";
 import { createRoot, type Root } from "react-dom/client";
-import "./styles.css";
-import App from "./App.tsx";
+import "./src/styles/styles.css";
+import App from "./src/components/App.tsx";
 
 const rootElement: HTMLDivElement = document.getElementById(
   "root",

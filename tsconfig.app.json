@@ -21,5 +21,11 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "scripts", "eslint.config.{ts,js}", "vite.config.ts"]
+  "include": [
+    "src",
+    "scripts",
+    "eslint.config.{ts,js}",
+    "vite.config.ts",
+    "prettier.config.ts"
+  ]
 }

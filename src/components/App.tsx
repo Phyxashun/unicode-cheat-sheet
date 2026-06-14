@@ -1,4 +1,4 @@
-// ~ FILE-PATH: src/App.tsx
+// ~ FILE-PATH: src/components/App.tsx
 
 import { type FC, useState, useEffect, useCallback } from "react";
 import Header from "./components/Header";

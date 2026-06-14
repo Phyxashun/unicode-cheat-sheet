@@ -17,6 +17,9 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/settings.json
+!.vscode/cspell.json
+!.vscode/cspell-dictionary.txt
+!.vscode/arrow.svg
 !.vscode/extensions.json
 .idea
 .DS_Store

@@ -26,7 +26,7 @@ export default ts.config(
 
   // CUSTOM RULES AND OVERRIDES
   {
-    files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
     ...react.configs.flat.recommended,
     extends: [
       js.configs.recommended,

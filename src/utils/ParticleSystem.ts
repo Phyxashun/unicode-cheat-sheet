@@ -17,9 +17,7 @@ class ParticleSystem {
 
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
-    this.ctx = this.canvas.getContext("2d", {
-      colorSpace: "display-p3",
-    }) as CanvasRenderingContext2D;
+    this.ctx = this.canvas.getContext("2d") as CanvasRenderingContext2D;
 
     this.updateThemeColors();
     this.bindEvents();

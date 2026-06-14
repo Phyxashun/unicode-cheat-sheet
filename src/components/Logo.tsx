@@ -1,5 +1,7 @@
 // ~ FILE-PATH: src/components/Logo.tsx
 
+// ./src/components/Logo.tsx
+
 import { type FC } from "react";
 
 interface LogoProps {

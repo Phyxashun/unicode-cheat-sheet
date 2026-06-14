@@ -1,5 +1,5 @@
 {
-  // ~ file-path: .vscode/settings.json
+  // ~ FILE-PATH: .vscode/settings.json
   // ============================================================================================
   //      ⚙️ GENERAL SETTINGS
   // ============================================================================================
@@ -17,7 +17,7 @@
   //      🎨 WORKBENCH & APPEARANCE
   // ============================================================================================
   "workbench.colorTheme": "Theme Darker",
-  "workbench.iconTheme": "vs-seti",
+  "workbench.iconTheme": "flow-deep",
   "workbench.productIconTheme": "material-product-icons",
   "workbench.panel.defaultLocation": "right",
   // ============================================================================================
@@ -136,6 +136,13 @@
   "markdown.validate.enabled": true,
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD033": {
+      "allowed_elements": ["span"]
+    },
+    "MD041": false
   },
   // ============================================================================================
   //      ⚙️ JSON/JSONC SETTINGS
@@ -487,13 +494,6 @@
   "colorize.include": ["**/src/**", "*.html"],
   "colorize.exclude": ["**/node_modules/**", "**/ALL/**"],
   "colorize.colorized_variables": ["LESS"],
-  "cSpell.words": [
-    "AUTOINCREMENT",
-    "BLOCKEND",
-    "BLOCKNAME",
-    "BLOCKSTART",
-    "NAMESLIST"
-  ],
   // ============================================================================================
   //      🎨 HIGHLIGHT SETTINGS
   // ============================================================================================
@@ -585,9 +585,9 @@
     "software-terms"
   ],
   "cSpell.customDictionaries": {
-    "custom-dictionary-workspace": {
-      "name": "custom-dictionary-workspace",
-      "path": "${workspaceFolder:unicode-cheat-sheet}/.vscode/custom-dictionary-workspace.txt",
+    "cspell-dictionary": {
+      "name": "cspell-dictionary",
+      "path": "${workspaceFolder:unicode-cheat-sheet}/.vscode/cspell-dictionary.txt",
       "addWords": true,
       "scope": "workspace"
     }
